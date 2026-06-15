@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply min-h-screen bg-gradient-to-b from-slate-50 via-white to-sky-50 text-slate-900 antialiased;
+}
+
+@keyframes scan-line {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(270px); }
+  100% { transform: translateY(0); }
+}
+
+.animate-scan {
+  animation: scan-line 4s ease-in-out infinite;
+}
+
+[id^="verifyrx-scanner-"] video {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 12px;
+}
+
+
